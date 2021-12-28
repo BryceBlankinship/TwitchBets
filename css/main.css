@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #0E0E10;
+    font-family: sans-serif;
+}
+
+/*
+Light Purple:
+#9256ED
+
+Dark Gray:
+#0E0E10
+
+Light Gray:
+#1F1F23
+
+Dimmed White:
+#EFEFF1
+*/
+
+.main {
+    height: 400px;
+    width: 300px;
+}
+
+.title {
+    color: #EFEFF1;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.subtitle {
+    margin-top: 5px;
+    color: #EFEFF1;
+    font-size: 12px;
+    text-align: center;
+}
+
+.twitch-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 150px;
+    height: 150px;
+}

@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+  
+    "name": "TwitchBets",
+    "description": "Bet on your favorite twitch streamers.",
+    "version": "1.0",
+  
+    "browser_action": {
+      "default_icon": "images/icon.png",
+      "default_popup": "html/main.html"
+    },
+    "permissions": [
+      "activeTab",
+      "https://ajax.googleapis.com/"
+    ],
+    "web_accessible_resources": [
+        "images/*.png",
+        "images/*.svg",
+        "css/main.css",
+        "js/main.js",
+        "html/main.html",
+        "html/streamoverview.html",
+        "js/streamoverview.js"
+    ]
+  }
