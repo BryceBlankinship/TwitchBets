@@ -1,12 +1,13 @@
-/**
- * This extension shouldn't have much performance need, so making everything in one JS file.
- */
-
 let twitchLogo = document.getElementById("twitch-logo");
 
 
-twitchLogo.addEventListener("click", function (){
-    window.location.href = "https://www.twitch.tv/";
+twitchLogo.addEventListener("click", async () => {
+    let [tab] = await chrome.tabs.query({active: true, currentWindow: true});
+
+    chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        function: changePageToTwitch,
+    });
 });
 
 twitchLogo.addEventListener("mouseenter", function (){
@@ -16,3 +17,7 @@ twitchLogo.addEventListener("mouseenter", function (){
 twitchLogo.addEventListener("mouseleave", function (){
     this.src = "../images/twitch-white.svg";
 });
+
+function changePageToTwitch() {
+    window.location.href = "https://www.twitch.tv/";
+}
